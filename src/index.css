@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.c-SVG-bg {
+  background: radial-gradient(
+    rgba(169, 190, 227, 1) 15%,
+    rgba(89, 102, 122, 0.5) 80%,
+    rgba(22, 23, 26, 1) 100%
+  );
+  box-shadow: 0 8px 32px 0 rgba(156, 161, 224, 0.37);
+}

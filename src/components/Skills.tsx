@@ -1,4 +1,3 @@
-/// <reference types="vite-plugin-svgr/client" />
 import HTML_SVG from "../assets/svg/HTML5_logo_and_wordmark.svg?react";
 import CSS_SVG from "../assets/svg/CSS3_logo_and_wordmark.svg?react";
 import JavaScript_SVG from "../assets/svg/logo-javascript.svg?react";
@@ -20,40 +19,40 @@ const Skills = () => {
         <h3 className="text-center text-5xl text-slate-100 mb-16">Skills</h3>
         <div className="pb-32 flex flex-wrap gap-28 justify-center">
           <div className="c-SVG-bg p-8 rounded-full">
-            <HTML_SVG className="h-32 w-min" />
+            <HTML_SVG className="h-24 w-min" />
           </div>
           <div className="c-SVG-bg p-8 rounded-full">
-            <CSS_SVG className="h-32 w-min" />
+            <CSS_SVG className="h-24 w-min" />
           </div>
           <div className="c-SVG-bg p-8 rounded-full">
-            <JavaScript_SVG className="h-32 w-min rounded-lg" />
+            <JavaScript_SVG className="h-24 w-min rounded-lg" />
           </div>
           <div className="c-SVG-bg p-8 rounded-full">
-            <TypeScript_SVG className="h-32 w-min rounded-lg" />
+            <TypeScript_SVG className="h-24 w-min rounded-lg" />
           </div>
           <div className="c-SVG-bg p-8 rounded-full">
-            <React_SVG className="h-32 w-min" />
+            <React_SVG className="h-24 w-min" />
           </div>
           <div className="c-SVG-bg p-8 rounded-full">
-            <TailwindCSS_SVG className="h-32 w-min" />
+            <TailwindCSS_SVG className="h-24 w-min" />
           </div>
           <div className="c-SVG-bg p-8 rounded-full">
-            <CSharp_SVG className="h-32 w-min" />
+            <CSharp_SVG className="h-24 w-min" />
           </div>
           <div className="c-SVG-bg p-8 rounded-full">
-            <DotNET_SVG className="h-32 w-min rounded-lg" />
+            <DotNET_SVG className="h-24 w-min rounded-lg" />
           </div>
           <div className="c-SVG-bg p-8 rounded-full">
-            <SQL_SVG className="h-32 w-min" />
+            <SQL_SVG className="h-24 w-min" />
           </div>
           <div className="c-SVG-bg p-8 rounded-full">
-            <SQLServer_SVG className="h-32 w-min" />
+            <SQLServer_SVG className="h-24 w-min" />
           </div>
           <div className="c-SVG-bg p-8 rounded-full">
-            <PostgreSQL_SVG className="h-32 w-min" />
+            <PostgreSQL_SVG className="h-24 w-min" />
           </div>
           <div className="c-SVG-bg p-8 rounded-full">
-            <Git_SVG className="h-32 w-min" />
+            <Git_SVG className="h-24 w-min" />
           </div>
         </div>
       </div>

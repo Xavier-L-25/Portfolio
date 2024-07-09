@@ -8,10 +8,10 @@
 }
 
 .c-animation {
-  animation: bounce 1s ease-in-out infinite alternate;
+  animation: Bounce 1s ease-in-out infinite alternate;
 }
 
-@keyframes bounce {
+@keyframes Bounce {
   from {
     transform: translateY(0);
   }

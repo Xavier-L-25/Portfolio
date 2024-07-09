@@ -1,0 +1,12 @@
+.c-connect-bg {
+  background-color: rgba(22, 23, 26, 1);
+}
+
+.c-form-bg {
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(156, 161, 224, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
