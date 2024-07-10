@@ -34,7 +34,7 @@ const Skills = forwardRef((_props, ref) => {
         <h3 className="font-neuropol font-bold text-center text-5xl text-slate-100 mb-16">
           Skills
         </h3>
-        <div className="pb-32 flex flex-wrap gap-28 justify-center">
+        <div className="flex flex-wrap gap-28 justify-center">
           <div className="c-SVG-bg p-8 rounded-full">
             <HTML_SVG className="h-24 w-min" />
           </div>

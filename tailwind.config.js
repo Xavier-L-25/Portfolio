@@ -8,11 +8,8 @@ export default {
       fontFamily: {
         nasalization: ["Nasalization", "sans-serif"],
         zekton: ["Zekton", "sans-serif"],
-        effortless: ["Effortless", "sans-serif"],
         vezla: ["Vezla", "sans-serif"],
         neuropol: ["Neuropol", "sans-serif"],
-        helmet: ["Helmet", "sans-serif"],
-        forgotten: ["Forgotten", "sans-serif"],
       },
     },
   },

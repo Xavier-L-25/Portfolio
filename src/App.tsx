@@ -7,6 +7,7 @@ import Connect from "./components/Connect";
 import "./App.css";
 
 function App() {
+  const topRef = useRef<HTMLElement>(null);
   const aboutRef = useRef<HTMLElement>(null);
   const skillsRef = useRef<HTMLElement>(null);
   const connectRef = useRef<HTMLElement>(null);
@@ -18,10 +19,10 @@ function App() {
         refToSkills={skillsRef}
         refToConnect={connectRef}
       />
-      <Intro />
+      <Intro ref={topRef} />
       <About ref={aboutRef} />
       <Skills ref={skillsRef} />
-      <Connect ref={connectRef} />
+      <Connect ref={connectRef} refToTop={topRef} />
     </div>
   );
 }

@@ -28,27 +28,29 @@ const Navbar = ({ refToAbout, refToSkills, refToConnect }: Ref) => {
         <ul className="navbar-end space-x-32">
           <li
             id="About"
-            className="font-zekton text-neutral-50 text-xl font-semibold hover:text-neutral-200 hover:cursor-pointer"
+            className="font-zekton text-neutral-50 text-xl font-semibold hover:text-neutral-200 hover:cursor-pointer hover:-translate-x-1 hover:-translate-y-1"
             onClick={scroll}
           >
             About
           </li>
           <li
             id="Skills"
-            className="font-zekton text-neutral-50 text-xl font-semibold hover:text-neutral-200 hover:cursor-pointer"
+            className="font-zekton text-neutral-50 text-xl font-semibold hover:text-neutral-200 hover:cursor-pointer hover:-translate-x-1 hover:-translate-y-1"
             onClick={scroll}
           >
             Skills
           </li>
           <li
             id="Connect"
-            className="font-zekton text-neutral-50 text-xl font-semibold hover:text-neutral-200 hover:cursor-pointer"
+            className="font-zekton text-neutral-50 text-xl font-semibold hover:text-neutral-200 hover:cursor-pointer hover:-translate-x-1 hover:-translate-y-1"
             onClick={scroll}
           >
             Connect
           </li>
-          <li className="font-zekton text-neutral-50 text-xl font-semibold hover:text-neutral-200 hover:cursor-pointer">
-            Resume
+          <li className="font-zekton text-neutral-50 text-xl font-semibold hover:text-neutral-200 hover:cursor-pointer hover:-translate-x-1 hover:-translate-y-1">
+            <a href="/Resume2024.pdf" download={"Xavier-Resume"}>
+              Resume
+            </a>
           </li>
         </ul>
       </nav>

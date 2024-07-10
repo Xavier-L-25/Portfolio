@@ -13,3 +13,7 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
+.c-hover:hover {
+  box-shadow: 0 8px 32px 0 rgba(199, 201, 235, 0.37);
+}

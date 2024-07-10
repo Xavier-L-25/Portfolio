@@ -3,6 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 import GitHub_SVG from "../assets/svg/GitHub_Invertocat_Logo.svg?react";
 import LinkedIn_SVG from "../assets/svg/LinkedIn_icon.svg?react";
+import { IoIosArrowDropup } from "react-icons/io";
 import "./CSS/connect.css";
 
 type Inputs = {
@@ -11,7 +12,11 @@ type Inputs = {
   message: string;
 };
 
-const Connect = forwardRef((_props, ref) => {
+type Ref = {
+  refToTop: React.RefObject<HTMLElement>;
+};
+
+const Connect = forwardRef(({ refToTop }: Ref, ref) => {
   const connectRef = useRef<HTMLElement>(null);
   const form = useRef<HTMLFormElement>(null);
   const {
@@ -50,6 +55,10 @@ const Connect = forwardRef((_props, ref) => {
     }),
     []
   );
+
+  const scrollTop = () => {
+    refToTop.current?.scroll();
+  };
 
   return (
     <section className="c-connect-bg py-12" ref={connectRef}>
@@ -116,16 +125,30 @@ const Connect = forwardRef((_props, ref) => {
         </button>
       </form>
       <div className="flex justify-center space-x-40 pt-20">
-        <a href="https://github.com/Xavier-L-25" target="_blank">
+        <a
+          className="c-hover hover:-translate-x-1 hover:-translate-y-1"
+          href="https://github.com/Xavier-L-25"
+          target="_blank"
+        >
           <GitHub_SVG className="c-SVG-bg h-20 w-min" />
         </a>
         <a
+          className="c-hover hover:-translate-x-1 hover:-translate-y-1"
           href="https://www.linkedin.com/in/xavier-lopez-1a9713281/"
           target="_blank"
         >
           <LinkedIn_SVG className="c-SVG-bg h-20 w-min" />
         </a>
       </div>
+      <button
+        className="mt-10 mx-auto block hover:-translate-y-1"
+        onClick={scrollTop}
+      >
+        <IoIosArrowDropup className="child mx-auto text-slate-100 size-7" />
+        <p className="child font-vezla text-center text-lg text-slate-100">
+          Scroll to top
+        </p>
+      </button>
     </section>
   );
 });
