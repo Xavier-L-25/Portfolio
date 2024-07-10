@@ -1,3 +1,4 @@
+import { useRef, forwardRef, useImperativeHandle } from "react";
 import HTML_SVG from "../assets/svg/HTML5_logo_and_wordmark.svg?react";
 import CSS_SVG from "../assets/svg/CSS3_logo_and_wordmark.svg?react";
 import JavaScript_SVG from "../assets/svg/logo-javascript.svg?react";
@@ -12,11 +13,27 @@ import PostgreSQL_SVG from "../assets/svg/postgre-sql.svg?react";
 import Git_SVG from "../assets/svg/Git-logo.svg?react";
 import "./CSS/skills.css";
 
-const Skills = () => {
+const Skills = forwardRef((_props, ref) => {
+  const skillsRef = useRef<HTMLElement>(null);
+
+  useImperativeHandle(
+    ref,
+    () => ({
+      scroll: () => {
+        skillsRef.current?.scrollIntoView({
+          behavior: "smooth",
+        });
+      },
+    }),
+    []
+  );
+
   return (
-    <section className="c-skills-bg">
+    <section className="c-skills-bg py-12" ref={skillsRef}>
       <div className="container mx-auto">
-        <h3 className="text-center text-5xl text-slate-100 mb-16">Skills</h3>
+        <h3 className="font-neuropol font-bold text-center text-5xl text-slate-100 mb-16">
+          Skills
+        </h3>
         <div className="pb-32 flex flex-wrap gap-28 justify-center">
           <div className="c-SVG-bg p-8 rounded-full">
             <HTML_SVG className="h-24 w-min" />
@@ -58,6 +75,6 @@ const Skills = () => {
       </div>
     </section>
   );
-};
+});
 
 export default Skills;

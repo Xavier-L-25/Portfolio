@@ -1,21 +1,39 @@
+import { useRef, forwardRef, useImperativeHandle } from "react";
 import "./CSS/about.css";
 
-const About = () => {
+const About = forwardRef((_props, ref) => {
+  const aboutRef = useRef<HTMLElement>(null);
+
+  useImperativeHandle(
+    ref,
+    () => ({
+      scroll: () => {
+        aboutRef.current?.scrollIntoView({
+          behavior: "smooth",
+        });
+      },
+    }),
+    []
+  );
+
   return (
-    <section className="c-about-bg py-32">
+    <section className="c-about-bg py-12" ref={aboutRef}>
       <div className="container mx-auto">
-        <h3 className="text-center text-5xl text-slate-100 mb-24">About me</h3>
+        <h3 className="font-neuropol font-bold text-center text-5xl text-slate-100 mb-24">
+          About me
+        </h3>
         <div className="flex gap-x-24 items-center">
           <div className="h-min">
-            <h3 className="text-center text-3xl text-slate-100">
+            <h4 className="font-vezla font-bold text-center text-4xl text-slate-100">
               How it started...
-            </h3>
-            <p className="text-center text-xl text-slate-100">
+            </h4>
+            <p className="font-zekton text-center text-xl text-slate-100 leading-8">
               My software development journey started with the help of{" "}
               <a
                 className="text-cyan-100 underline hover:text-slate-300"
                 href="https://www.freecodecamp.org/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 FreeCodeCamp.org
               </a>
@@ -38,13 +56,16 @@ const About = () => {
           </div>
 
           <div className="h-min">
-            <h3 className="text-center text-3xl text-slate-100">Right now</h3>
-            <p className="text-center text-xl text-slate-100">
+            <h4 className="font-vezla font-bold text-center text-4xl text-slate-100">
+              Right now
+            </h4>
+            <p className="font-zekton text-center text-xl text-slate-100 leading-8">
               I joined{" "}
               <a
                 className="text-cyan-100 underline hover:text-slate-300"
                 href="https://sabio.la/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Sabio
               </a>{" "}
@@ -65,10 +86,10 @@ const About = () => {
           </div>
 
           <div className="h-min">
-            <h3 className="text-center text-3xl text-slate-100">
+            <h4 className="font-vezla font-bold text-center text-4xl text-slate-100">
               ...The future
-            </h3>
-            <p className="text-center text-xl text-slate-100">
+            </h4>
+            <p className="font-zekton text-center text-xl text-slate-100 leading-8">
               For the future I want to continue learning more about web
               development. One of the things I love about this industry is that
               there is always something new to learn. Whether that be learning a
@@ -88,6 +109,6 @@ const About = () => {
       </div>
     </section>
   );
-};
+});
 
 export default About;

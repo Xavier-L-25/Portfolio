@@ -2,6 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Nasalization";
+  src: url("./assets/fonts/nasalization-rg.otf");
+}
+
+@font-face {
+  font-family: "Zekton";
+  src: url(./assets/fonts/zekton-rg.otf);
+}
+
+@font-face {
+  font-family: "Effortless";
+  src: url("./assets/fonts/effortless.ttf");
+}
+
+@font-face {
+  font-family: "Vezla";
+  src: url("./assets/fonts/Vezla.ttf");
+}
+
+@font-face {
+  font-family: "Neuropol";
+  src: url("./assets/fonts/neuropol-x-rg.otf");
+}
+
+@font-face {
+  font-family: "Helmet";
+  src: url("./assets/fonts/Helmet-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Forgotten";
+  src: url("./assets//fonts/forgotten-futurist-rg.otf");
+}
+
 .c-SVG-bg {
   background: radial-gradient(
     rgba(169, 190, 227, 1) 15%,

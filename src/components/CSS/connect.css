@@ -3,7 +3,10 @@
 }
 
 .c-form-bg {
-  background: rgba(255, 255, 255, 0.35);
+  background: radial-gradient(
+    rgba(240, 244, 255, 0.35) 50%,
+    rgba(249, 251, 255, 0.5) 85%
+  );
   box-shadow: 0 8px 32px 0 rgba(156, 161, 224, 0.37);
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
